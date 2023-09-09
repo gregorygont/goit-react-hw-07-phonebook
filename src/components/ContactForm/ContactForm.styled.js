@@ -1,57 +1,40 @@
 import styled from 'styled-components';
-import { Form, Field, ErrorMessage } from 'formik';
 
-export const FormContact = styled(Form)`
-  border: 1px solid black;
-  width: 450px;
-  display: block;
-  padding: 15px;
-  margin: 0;
-`;
-
-export const ErrorText = styled(ErrorMessage)`
-  color: tomato;
-`;
-
-export const Label = styled.label`
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 1.15;
-`;
-
-export const Input = styled(Field)`
-  all: unset;
+export const Form = styled.form`
   display: flex;
-  border: 2px solid black;
-  margin: 10px 0;
-  padding: 15px;
-  font-size: 20px;
-  &:focus-visible {
-    border-radius: 4px;
-    border: 3px solid lightblue;
-  }
+  flex-direction: column;
+  margin-bottom: 20px;
+`;
+
+export const Input = styled.input`
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: none;
+  outline: 0;
+  background-color: #fff;
+  box-shadow: 0 1px 6px 0 #20212447;
 `;
 
 export const Button = styled.button`
-  box-shadow: inset 0px 0px 12px 3px #ffffff;
-  background: linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
-  background-color: #ededed;
-  border-radius: 4px;
-  border: 2px solid #dcdcdc;
-  display: inline-block;
-  cursor: pointer;
-  color: #212121;
-  font-family: Arial;
-  font-size: 20px;
-  font-weight: bold;
-  padding: 16px 37px;
-  text-decoration: none;
-  margin: 10px 0;
-
-  &:hover {
-    background: linear-gradient(to bottom, #212121 5%, #ededed 100%);
-    background-color: #212121;
-    color: #ffffff;
+  > svg {
+    width: 40px;
+    height: 30px;
   }
+  /* padding: 10px 20px; */
+  margin-top: 5px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid;
+  :hover {
+    background-color: #e0e0e0;
+    > svg {
+      fill: #00b02f;
+    }
+  }
+`;
+
+export const Text = styled.p`
+  /* padding: 10px 20px; */
+  margin-bottom: 15px;
 `;
